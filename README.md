@@ -1,8 +1,10 @@
 # Anxiety of Conception Book
 
-## Virtual Environment
+## Installation
 
-If this is the first time running the code, create a new environment with conda. (You may alternatively want to use the `virtualenv` package; the commands will be slightly different.)
+### With Conda
+
+If this is the first time running the code, create a new environment with [conda](https://docs.conda.io/en/latest/). (You may alternatively want to use the `virtualenv` package; the commands will be slightly different.)
 
 `conda create -n aoc`
 
@@ -14,8 +16,25 @@ Activate the environment.
 
 `conda activate aoc`
 
-Install NLTK, jupyter, numpy...
+Install dependencies.
+ 
+`conda install --yes --file requirements.txt`
 
-`conda install nltk`
+## With Poetry
 
-`conda install jupyter`
+Alternatively, you can get set up using [poetry](https://python-poetry.org/).
+
+`poetry install`
+
+And activate the environment.
+
+`poetry shell`
+
+## Running the notebook
+
+The book generator is contained in a [Jupyter Notebook](https://jupyter.org/) with includes an explanation of the algorithm and its implementation. From within your virtual environment, run:
+
+`jupyter notebook anxiety_of_conception_algorithm.ipynb`
+
+and view the notebook in your browser for the rest.
+
