@@ -15,4 +15,4 @@ matplotlib = "^3.9.2"
 
 [build-system]
 requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.apie
+build-backend = "poetry.core.masonry.apie"
