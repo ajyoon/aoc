@@ -8,7 +8,7 @@ If this is the first time running the code, create a new environment with [conda
 
 `conda create -n aoc`
 
-Check it has been created, or, if returning to the code, check the environment is available with conda. 
+Check it has been created, or, if returning to the code, check the environment is available with conda.
 
 `conda info --envs`
 
@@ -17,7 +17,7 @@ Activate the environment.
 `conda activate aoc`
 
 Install dependencies.
- 
+
 `conda install --yes --file requirements.txt`
 
 ## With Poetry
