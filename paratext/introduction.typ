@@ -1,4 +1,6 @@
-Introduction
+#let section_break() = align(center) [❋]
+
+= Introduction
 
 I wrote one hundred prose poems in the year before I gave birth to my child. And I wrote one hundred in the year after. I am interested in the arrangement of these poems. 
 
@@ -22,19 +24,18 @@ Part of what delighted me was simply that the traveling salesman problem is such
 
 Plus, the traveling salesman problem was technically a very fun problem to work on.
 
-*
+#section_break()
 
 So how was I to arrange these poems? Despite this problem being computationally difficult, one needn't look for the perfect, optimal solution. Instead, one can (and in fact does) look for approximately optimal solutions. The main idea is that first I pick a random order in which to visit the city-poems. Then I randomly swap two of the city-poems. If this represents a better order, I keep this order. If not, I discard it and return to my previous order. Though simple, one can repeat this many, many times (thousands, tens of thousands) and slowly, despite completely random guesses, the order starts to get better and better. 
 
 However, there is one extra, important detail. Remember that originally I split the poems in half, the poems before birth and the poems after. For the first printings, these poems are separated as originally written, and each set are ordered using the method above. But as more and more people order the book, the poems start to swap from side to side. So printing 13 may have two poems swapped; printing 36 may have five. Eventually, after about 200 pritnings, about fifty poems are swapped, representing a kind of equilibrium, and then the books start to meander, with the "mixture" level oscillating randomly.
 
-
-*
+#section_break()
 
 You, dear reader, are reading a particular iteration of this book. This iteration represents a specific amount of mixing between the two sets of poems, and a specific almost-but-not-quite-optimal ordering of those poems. If you are an early reader, the amount of mixing of my memories is low. If you are a later reader, they get progressively more and more mixed up, and finally shuffle around randomly with the distortion of time.
 
 This book, therefore, represents a distinct tour of the poems, influenced by how many readers came before you and the random sweepings of time. The connections made are distinctly yours, because you are bringing your own experience, and you are being coupled to a unique printing of the book. We have, in a way, merged, reader and author and words all, into a special creature that none of us could have quite imagined on our own.
 
-Katy Ilonka Gero
-Cambridge, Massachusetts
+Katy Ilonka Gero \
+Cambridge, Massachusetts \
 August 2024
