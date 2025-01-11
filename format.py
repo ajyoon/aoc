@@ -32,7 +32,7 @@ def _ensure_output_dir(output_dir: Path):
     os.makedirs(output_dir, exist_ok=True)
 
 
-def _copy_images(images: List[str]) -> None:
+def _copy_images() -> None:
     shutil.copy(
         _root_dir / "nothing_to_say_logo.svg",
         _tmp_dir / "nothing_to_say_logo.svg",
@@ -48,10 +48,8 @@ def _copy_paratext() -> None:
 
 
 def _format_item(item_text: str) -> str:
-    # All items are poems, unless they're "***", which represents
-    # a vertical gap.
-    if item_text == '***':
-        return f"#vertical_pause()\n\n"
+    if item_text == "<BREAK>":
+        return f"#vertical_break()\n\n"
     else:
         return f"#poem([{item_text}])\n\n"
 
@@ -82,38 +80,41 @@ def _run_typst(typst_file: Path, output_dir: Path) -> Path:
 
 def _render_version_internal(
     output_dir: Path,
-    output_id: str,
+    output_name: str,
     part_1_items: List[str],
     part_2_items: List[str],
     debug: bool,
 ) -> str:
     _ensure_output_dir(output_dir)
-    _copy_images(images)
+    _copy_images()
     _copy_paratext()
     template = _load_template()
-    formatted_typst = _format_template(template, items, images)
-    typst_path = _tmp_dir / f"{output_id}.typ"
+    formatted_typst = _format_template(template, part_1_items, part_2_items)
+    typst_path = _tmp_dir / f"{output_name}.typ"
     with open(typst_path, "w") as f:
         f.write(formatted_typst)
     if debug:
         print(f"Wrote formatted Typst file to {typst_path}")
-        print(f"Rendering PDF to {pdf_path}")
     pdf_path = _run_typst(typst_path, Path(output_dir))
+    if debug:
+        print(f"Rendered PDF to {pdf_path}")
     return pdf_path
 
 
 def render_version(
     output_dir: str,
-    output_id: str,
+    output_name: str,
     part_1_items: List[str],
     part_2_items: List[str],
     debug: bool = False,
 ) -> str:
+    print("part 1 length", len(part_1_items))
+    print("part 2 length", len(part_2_items))
     with _using_tmp_dir(debug):
         return _render_version_internal(
             _root_dir / output_dir,
-            output_id,
+            output_name,
             part_1_items,
             part_2_items,
-            images,
+            debug,
         )

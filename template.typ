@@ -76,7 +76,7 @@
 ]
 
 
-#let vertical_pause() = box(height: 15em)
+#let vertical_break() = box(height: 15em)
 
 // Inner title page
 #page[
