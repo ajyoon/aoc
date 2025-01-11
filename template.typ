@@ -72,7 +72,7 @@
 ]
 
 #let poem(text) = [
-  #par(justify:true, text)
+  #par(justify: true, spacing: 4em, text)
 ]
 
 
@@ -86,33 +86,32 @@
   #smallcaps([The Anxiety of Conception])
 ]
 
-#set page(numbering: "i")
-
 #pagebreak(to: "even")
-
 #include("./paratext/dedication.typ")
 
 #pagebreak(to: "even")
-
 #include("./paratext/epigraph.typ")
 
-#set page(numbering: none)
+#pagebreak()
+#set page(numbering: "i")
+#include("./paratext/introduction.typ")
 
+// Part 1 title page
 #pagebreak(to: "odd")
-
 #set page(numbering: "1")
 #counter(page).update(1)
-
-
 #page[
   #set align(center)
   #set align(horizon)
   #set text(size: 2em)
   #smallcaps([PART 1])
 ]
+
+// Part 1 contents
 
 %PART_1%
 
+// Part 2 title page
 #page[
   #set align(center)
   #set align(horizon)
@@ -120,6 +119,7 @@
   #smallcaps([PART 1])
 ]
 
+// Part 2 contents
 %PART_2%
 
 // #pagebreak()
