@@ -8,6 +8,7 @@ jupyter = "^1.1.1"
 numpy = "^2.1.1"
 matplotlib = "^3.9.2"
 seaborn = "^0.13.2"
+nbstripout = "^0.8.1"
 
 
 [build-system]
