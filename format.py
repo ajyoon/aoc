@@ -32,17 +32,18 @@ def _ensure_output_dir(output_dir: Path):
     os.makedirs(output_dir, exist_ok=True)
 
 
-def _copy_images() -> None:
-    shutil.copy(
-        _root_dir / "nothing_to_say_logo.svg",
-        _tmp_dir / "nothing_to_say_logo.svg",
+def _copy_assets() -> None:
+    shutil.copytree(
+        _root_dir / "assets",
+        _tmp_dir / "assets",
+        dirs_exist_ok=True,
     )
 
 
 def _copy_paratext() -> None:
     shutil.copytree(
         _root_dir / "paratext",
-        _tmp_dir / "paratext",
+        _tmp_dir,
         dirs_exist_ok=True,
     )
 
@@ -86,7 +87,7 @@ def _render_version_internal(
     debug: bool,
 ) -> str:
     _ensure_output_dir(output_dir)
-    _copy_images()
+    _copy_assets()
     _copy_paratext()
     template = _load_template()
     formatted_typst = _format_template(template, part_1_items, part_2_items)

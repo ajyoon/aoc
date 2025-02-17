@@ -4,8 +4,6 @@
 #let main_inner_margin = 1in
 #let margin_top = 0.75in
 #let margin_bottom = 0.75in
-#let image_spread_inner_margin = 0.75in
-#let image_spread_outer_margin = 0.6in
 
 #set page(
   width: page_width,
@@ -63,7 +61,7 @@
     columns: (3em, auto),
     rows:(1.661589587em),
     gutter: 1em,
-    image("nothing_to_say_logo.svg", height: 100%),
+    image("assets/nothing_to_say_logo.svg", height: 100%),
     [
       nothing-to-say.org \
       editors\@nothing-to-say.org
@@ -72,11 +70,21 @@
 ]
 
 #let poem(text) = [
-  #par(justify: true, spacing: 4em, text)
+  #par(justify: true, spacing: 6em, text)
 ]
 
 
-#let vertical_break() = box(height: 15em)
+#let vertical_break() = box(
+  width: 100%,
+  height: 15em,
+  [
+    #set align(center)
+    #set align(horizon)
+    #rotate(-10deg)[
+      #image("assets/D-50.svg", height: 4em)
+    ]
+  ]
+)
 
 // Inner title page
 #page[
@@ -87,14 +95,14 @@
 ]
 
 #pagebreak(to: "even")
-#include("./paratext/dedication.typ")
+#include("./dedication.typ")
 
 #pagebreak(to: "even")
-#include("./paratext/epigraph.typ")
+#include("./epigraph.typ")
 
 #pagebreak()
 #set page(numbering: "i")
-#include("./paratext/introduction.typ")
+#include("./introduction.typ")
 
 // Part 1 title page
 #pagebreak(to: "odd")
@@ -104,7 +112,7 @@
   #set align(center)
   #set align(horizon)
   #set text(size: 2em)
-  #smallcaps([PART 1])
+  #smallcaps([Part 1])
 ]
 
 // Part 1 contents
@@ -116,16 +124,20 @@
   #set align(center)
   #set align(horizon)
   #set text(size: 2em)
-  #smallcaps([PART 1])
+  #smallcaps([Part 2])
 ]
 
 // Part 2 contents
 %PART_2%
 
-// #pagebreak()
+#pagebreak()
 
-// #include("./paratext/appendix.typ")
+#include("./appendix.typ")
 
-// #pagebreak()
+#pagebreak()
 
-// #include("./paratext/about_the_author.typ")
+#include("./acknowledgements.typ")
+
+#pagebreak()
+
+#include("./bio.typ")
