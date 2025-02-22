@@ -1,4 +1,13 @@
-#let section_break() = align(center)[❋]
+#let section_break() = box(
+  width: 100%,
+  height: 3em,
+  [
+    #set align(center)
+    #set align(horizon)
+    #set text(size: 8pt)
+    ❋
+  ]
+)
 
 = Introduction
 
