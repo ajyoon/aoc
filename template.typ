@@ -36,6 +36,7 @@
   #set align(horizon)
   = The Anxiety of Conception
   == Katy Ilonka Gero
+  Generation 12 of ∞
 ]
 
 #pagebreak()
@@ -90,8 +91,15 @@
 #page[
   #set align(center)
   #set align(horizon)
-  #set text(size: 2em)
-  #smallcaps([The Anxiety of Conception])
+  #text(size: 2em)[
+    #smallcaps([The Anxiety of Conception])
+  ]
+
+  #text(size: 1.5em)[
+    $
+      12 \/ infinity
+    $
+  ]
 ]
 
 #pagebreak(to: "even")
