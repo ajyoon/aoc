@@ -36,7 +36,7 @@
   #set align(horizon)
   = The Anxiety of Conception
   == Katy Ilonka Gero
-  Generation 12 of ∞
+  12 of ∞
 ]
 
 #pagebreak()
