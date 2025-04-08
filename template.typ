@@ -36,6 +36,7 @@
   #set align(horizon)
   = The Anxiety of Conception
   == Katy Ilonka Gero
+  %BOOK_NUMBER% of ∞
 ]
 
 #pagebreak()
@@ -53,7 +54,9 @@
 
   For further permission requests, please contact the publisher.
 
-  ISBN XXXXXXXXXXXXXXXXXXXX
+  ISBN 978-1-7339515-4-8
+
+  Cover art by Noa Samson: noasamson.com
 
   Typeset using Typst and the Libertinus Serif font.
 
@@ -90,19 +93,29 @@
 #page[
   #set align(center)
   #set align(horizon)
-  #set text(size: 2em)
-  #smallcaps([The Anxiety of Conception])
+  #text(size: 2em)[
+    #smallcaps([The Anxiety of Conception])
+  ]
+
+  #text(size: 1.5em)[
+    $
+      %BOOK_NUMBER% \/ infinity
+    $
+  ]
 ]
 
-#pagebreak(to: "even")
+#pagebreak(to: "odd")
 #include("./dedication.typ")
 
-#pagebreak(to: "even")
+#pagebreak(to: "odd")
 #include("./epigraph.typ")
 
-#pagebreak()
+#pagebreak(to: "odd")
 #set page(numbering: "i")
 #include("./introduction.typ")
+
+#pagebreak(to: "even")
+#set page(numbering: none)
 
 // Part 1 title page
 #pagebreak(to: "odd")
@@ -119,6 +132,10 @@
 
 %PART_1%
 
+#pagebreak(to: "even")
+#pagebreak(to: "odd")
+#set page(numbering: "1")
+
 // Part 2 title page
 #page[
   #set align(center)
@@ -132,7 +149,7 @@
 
 #pagebreak()
 
-#include("./appendix.typ")
+#include("./technical-notes.typ")
 
 #pagebreak()
 

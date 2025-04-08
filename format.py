@@ -48,6 +48,15 @@ def _copy_paratext() -> None:
     )
 
 
+def _interpolate_paratext(book_number: int) -> None:
+    for file_path in Path(_tmp_dir).glob("*.typ"):
+        with open(file_path, "r") as f:
+            content = f.read()
+        modified = content.replace("%BOOK_NUMBER%", str(book_number))
+        with open(file_path, "w") as f:
+            f.write(modified)
+
+
 def _format_item(item_text: str) -> str:
     if item_text == "<BREAK>":
         return f"#vertical_break()\n\n"
@@ -59,10 +68,15 @@ def _format_template(
     template: str,
     part_1_items: List[str],
     part_2_items: List[str],
+    book_number: int,
 ) -> str:
     part_1 = "\n\n".join([_format_item(item) for item in part_1_items])
     part_2 = "\n\n".join([_format_item(item) for item in part_2_items])
-    return template.replace("%PART_1%", part_1).replace("%PART_2%", part_2)
+    return (
+        template.replace("%PART_1%", part_1)
+        .replace("%PART_2%", part_2)
+        .replace("%BOOK_NUMBER%", str(book_number))
+    )
 
 
 def _verify_typst_installed() -> None:
@@ -84,13 +98,17 @@ def _render_version_internal(
     output_name: str,
     part_1_items: List[str],
     part_2_items: List[str],
+    book_number: int,
     debug: bool,
 ) -> str:
     _ensure_output_dir(output_dir)
     _copy_assets()
     _copy_paratext()
+    _interpolate_paratext(book_number)
     template = _load_template()
-    formatted_typst = _format_template(template, part_1_items, part_2_items)
+    formatted_typst = _format_template(
+        template, part_1_items, part_2_items, book_number
+    )
     typst_path = _tmp_dir / f"{output_name}.typ"
     with open(typst_path, "w") as f:
         f.write(formatted_typst)
@@ -107,15 +125,16 @@ def render_version(
     output_name: str,
     part_1_items: List[str],
     part_2_items: List[str],
+    book_number: int,
     debug: bool = False,
 ) -> str:
-    print("part 1 length", len(part_1_items))
-    print("part 2 length", len(part_2_items))
+    print(f"formatting book number: {book_number}")
     with _using_tmp_dir(debug):
         return _render_version_internal(
             _root_dir / output_dir,
             output_name,
             part_1_items,
             part_2_items,
+            book_number,
             debug,
         )
