@@ -1,4 +1,4 @@
-= Appendix
+= Technical notes
 
 == Calculating the distance between poems
 
