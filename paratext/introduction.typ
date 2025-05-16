@@ -19,7 +19,7 @@ I also wondered if, as time progressed and my experiences became distorted in my
 
 When developing the concept for this book, I wanted the reader to contribute to this integration of time and memory and experience. As readers come to the book (to any book really) they bring their own interpretation, distorting the book's ideas through a lens of their own. Your experiences with conception—whether of child or otherwise—will color your interpretation of my words. And then, if you read it again, or discuss it with a friend, or return to the book years later at your own momentous threshold, you change the book again, experiencing it and therefore making it anew.
 
-I wanted The Anxiety of Conception to physically enact the way books change over time. Thus, each printing of The Anxiety of Conception presents the poems in a new order, representing a step towards a new interpretation, one influenced by all the readers that came before. In the endless sequence of generations, you are reading number %BOOK_NUMBER%.
+I wanted The Anxiety of Conception to physically enact the way books change over time. Thus, each printing of The Anxiety of Conception presents the poems in a new order, representing a step towards a new interpretation, one influenced by all the readers that came before. In the endless sequence of generations, you are reading printing number %BOOK_NUMBER%.
 
 But if the order of the poems is to change with each printing, how was I to arrange them?
 

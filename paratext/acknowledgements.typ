@@ -30,6 +30,8 @@ Thanks to Keyon Vafa for being my statistician-on-call.
 
 Thank you to Elena Glassman, who made sure I had a real maternity leave. 
 
+Thank you to my parents, who came to live with and support me during pregnancy, postpartum, and beyond, and have always gone out of their way to make creation easier for me.
+
 Thanks to my dog, Topo Steven Gero Hughes; I'm sorry we cut off your balls. 
 
 Thanks to Silas Hughes: for working with me on the ideas for this book, for holding me up in so many ways, and for making sure I had time to write. 

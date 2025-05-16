@@ -4,12 +4,12 @@
 
 A score is assigned to denote the 'distance' between poems, which is then used to determine how to order them. If we have two poems, the score is calculated by looking at the last 10 words of the first poem, and the first 10 words of the second poem. For any word in the first poem that is also in the second poem (just the last / first 10 words) we add:
 
-+ 2 if it's the word _the_, _an_, or _a_
-+ 4 if it's a stop word like _i_, _you_, _theirs_, _this_, _these_, _was_, _had_, etc.
-+ 10 if the stemmed word matches (e.g. _computation_ and _computer_ would match)
-+ 20 if the exact word matches
+- 2 if it's the word _the_, _an_, or _a_
+- 4 if it's a stop word like _i_, _you_, _theirs_, _this_, _these_, _was_, _had_, etc.
+- 10 if the stemmed word matches (e.g. _computation_ and _computer_ would match)
+- 20 if the exact word matches
 
-A higher score means the poems are 'closer'. As a technical note, this is score is inverted such that lower scores are 'closer' (to better match the 'distance' metaphor where small distances indicate better routes). Also of note is that the scores are asymmetric. This means that the score for #smallcaps("poem a") then #smallcaps("poem b") is different that the score for #smallcaps("poem b") then #smallcaps("poem a").
+A higher score means the poems are 'closer'. Note this is score is then inverted such that lower scores are 'closer' (to better match the 'distance' metaphor where small distances indicate better routes). Also of note is that the scores are asymmetric. This means that the score for #smallcaps("poem a") then #smallcaps("poem b") is different that the score for #smallcaps("poem b") then #smallcaps("poem a").
 
 == Ordering the poems
 
