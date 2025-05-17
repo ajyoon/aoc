@@ -147,7 +147,8 @@
 // Part 2 contents
 %PART_2%
 
-#pagebreak()
+#pagebreak(to: "even")
+#pagebreak(to: "odd")
 
 #include("./technical-notes.typ")
 
