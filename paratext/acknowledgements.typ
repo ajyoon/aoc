@@ -30,7 +30,7 @@ Thanks to Keyon Vafa for being my statistician-on-call.
 
 Thank you to Elena Glassman, who made sure I had a real maternity leave. 
 
-Thank you to my parents, who came to live with and support me during pregnancy, postpartum, and beyond, and have always gone out of their way to make creation easier for me.
+Thank you to my parents, Mary Lou Maher and John Gero, who came to live with and support me during pregnancy, postpartum, and beyond, and have always gone out of their way to make creation easier for me.
 
 Thanks to my dog, Topo Steven Gero Hughes; I'm sorry we cut off your balls. 
 
