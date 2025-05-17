@@ -9,7 +9,7 @@ A score is assigned to denote the 'distance' between poems, which is then used t
 - 10 if the stemmed word matches (e.g. _computation_ and _computer_ would match)
 - 20 if the exact word matches
 
-A higher score means the poems are 'closer'. Note this is score is then inverted such that lower scores are 'closer' (to better match the 'distance' metaphor where small distances indicate better routes). Also of note is that the scores are asymmetric. This means that the score for #smallcaps("poem a") then #smallcaps("poem b") is different that the score for #smallcaps("poem b") then #smallcaps("poem a").
+A higher score means the poems are 'closer'. Note this score is then inverted such that lower scores are 'closer' (to better match the 'distance' metaphor where small distances indicate better routes). Also of note is that the scores are asymmetric. This means that the score for #smallcaps("poem a") then #smallcaps("poem b") is different than the score for #smallcaps("poem b") then #smallcaps("poem a").
 
 == Ordering the poems
 
