@@ -1,6 +1,6 @@
 #let section_break() = box(
   width: 100%,
-  height: 3em,
+  height: 2em,
   [
     #set align(center)
     #set align(horizon)
